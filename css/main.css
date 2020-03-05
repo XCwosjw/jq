@@ -1164,7 +1164,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #75796e;
+  background: #b4ff54;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1490,10 +1490,10 @@ body {
   background-size: 100% 100%;
 }
 * {
-  cursor: url("https://cdn.jsdelivr.net/gh/XCwosjw/CDN/[zc]_diagonal_resize_1_v2.0-33300621.ico"), auto !important;
+  cursor: url("https://cdn.jsdelivr.net/gh/XCwosjw/CDN/images/[zc]_diagonal_resize_1.ico"), auto !important;
 }
 :active {
-  cursor: url("https://cdn.jsdelivr.net/gh/XCwosjw/CDN/[zc]_diagonal_resize_2_v2.0-5920622.ico"), auto !important;
+  cursor: url("https://cdn.jsdelivr.net/gh/XCwosjw/CDN/images/[zc]_diagonal_resize_2.ico"), auto !important;
 }
 .post-body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
