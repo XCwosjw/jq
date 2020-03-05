@@ -603,7 +603,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
             const strs = href.split('/');
             if (strs.length >= 3) {
                 const host = strs[2];
-                if (host !== 'https://xcwosjw.tk' || window.location.host) {
+                if (host !== 'window.location.host' || window.location.host) {
                     $this.attr('href', '/go.html?u='+Base64.encode(href)+'').attr('rel', 'external nofollow noopener noreferrer');
                     if (true) {
                         $this.attr('target', '_blank');
