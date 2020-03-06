@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="仰望星空，俯瞰世间">
@@ -84,6 +84,12 @@
   </style>
 </noscript>
 
+  <!-- Include quicklink from dist -->
+  <script src="dist/quicklink.umd.js"></script>
+  <!-- Initialize (you can do this whenever you want) -->
+  <script>
+  quicklink.listen();
+  </script>
 <link rel="alternate" href="/atom.xml" title="星" type="application/atom+xml">
 </head>
 
@@ -200,7 +206,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/05/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/06/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -214,7 +220,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/03/05/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+            <a href="/2020/03/06/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
         </h1>
 
         <div class="post-meta">
@@ -224,10 +230,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-03-05 13:08:37 / 修改时间：07:38:00" itemprop="dateCreated datePublished" datetime="2020-03-05T13:08:37+08:00">2020-03-05</time>
+              <time title="创建时间：2020-03-06 13:18:33" itemprop="dateCreated datePublished" datetime="2020-03-06T13:18:33+08:00">2020-03-06</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-05 07:38:00" itemprop="dateModified" datetime="2020-03-05T07:38:00+08:00">2020-03-05</time>
+              </span>
 
           
   
@@ -238,8 +250,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/03/05/hello-world/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/05/hello-world/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/03/06/hello-world/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/06/hello-world/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -460,6 +472,7 @@ setInterval("createtime()",250);
   
   <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -589,12 +602,11 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 </script>
 
     </div>
-  <script async src="https://cdn.jsdelivr.net/npm/perfops-rom"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/click_show_text.min.js"></script>
   <script type="text/javascript" src="js/snow.min.js"></script>
-  <script type="text/javascript" color="238,238,0" opacity='0.7' zIndex="-2" count="150" src="dist/canvas-nest.js"></script>
+  <script type="text/javascript" color="238,238,0" opacity='0.7' zIndex="-2" count="150" src="dist/canvas-nest.min.js"></script>
   <script src="js/autoload.min.js"></script>
   <script type="text/javascript" src="/js/FunnyTitle.min.js"></script>
   
