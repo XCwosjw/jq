@@ -86,18 +86,20 @@
   </style>
 </noscript>
 
-  <!-- Include quicklink from dist -->
-  <script src="dist/quicklink.umd.js"></script>
-  <!-- Initialize (you can do this whenever you want) -->
-  <script>
-  quicklink.listen();
-  </script>
+  
 <link rel="alternate" href="/atom.xml" title="星" type="application/atom+xml">
 </head>
+
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
     <div class="headband"></div>
+	<script src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN/js/quicklink.umd.js"></script>
+    <script>
+    window.addEventListener('load', () => {
+      quicklink.listen();
+    });
+    </script>
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
@@ -417,10 +419,10 @@
 
 
       </div>
-	  <link rel="stylesheet" href="/dist/APlayer.min.css">
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/XCwosjw/CDN/css/APlayer.min.css">
       <div id="aplayer"></div>
-      <script type="text/javascript" src="/dist/APlayer.min.js"></script>
-      <script type="text/javascript" src="/dist/music.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN/js/APlayer.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN/js/music.min.js"></script>
 
     </div>
   </aside>
@@ -636,13 +638,13 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 </script>
 
     </div>
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/click_show_text.min.js"></script>
-  <script type="text/javascript" src="js/snow.min.js"></script>
-  <script type="text/javascript" color="238,238,0" opacity='0.7' zIndex="-2" count="150" src="dist/canvas-nest.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN/js/jquery.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN/js/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN/js/click_show_text.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN/js/snow.min.js"></script>
+  <script type="text/javascript" color="238,238,0" opacity='0.7' zIndex="-2" count="150" src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN/js/canvas-nest.min.js"></script>
   <script src="js/autoload.min.js"></script>
-  <script type="text/javascript" src="/js/FunnyTitle.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN/js/FunnyTitle.min.js"></script>
   
 
         <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
