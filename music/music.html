@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+<meta charset="UTF-8">
+<title>Music Player | Audio Player 🎵</title>
+
+
+<!--字体图标样式-->
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/XCwosjw/CDN@master/css/solid.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/XCwosjw/CDN@master/css/fontawesome.css'>
+
+
+<!--布局样式-->
+<link rel="stylesheet" href="css/style.css">
+
+  
+<link rel="alternate" href="/atom.xml" title="星" type="application/atom+xml">
+</head>
+
+<body>
+
+  <!-- Tracks used in this music/audio player application are free to use. I downloaded them from Soundcloud and NCS websites. I am not the owner of these tracks.
+
+Please don't create new pen by just copying and pasting code from this pen ( as I have seen some of them ), if you do that then don't forget to link back to this original pen. If you want to copy this pen then simply use the Fork button. Thank you -->
+
+  <div id="app-cover">
+      <div id="bg-artwork"></div>
+      <div id="bg-layer"></div>
+      <div id="player">
+        <div id="player-track">
+          <div id="album-name"></div>
+          <div id="track-name"></div>
+          <div id="track-time">
+            <div id="current-time"></div>
+            <div id="track-length"></div>
+          </div>
+          <div id="s-area">
+            <div id="ins-time"></div>
+            <div id="s-hover"></div>
+            <div id="seek-bar"></div>
+          </div>
+        </div>
+        <div id="player-content">
+          <div id="album-art">
+            <img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN@master/images/In%20the%20end.jpg" class="active" id="_1">
+            <img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN@master/images/aLIEz.jpg" id="_2">
+            <div id="buffer-box">缓冲…</div>
+          </div>
+          <div id="player-controls">
+            <div class="control">
+              <div class="button" id="play-previous">
+                <i class="fas fa-backward"></i>
+              </div>
+            </div>
+            <div class="control">
+              <div class="button" id="play-pause-button">
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+            <div class="control">
+              <div class="button" id="play-next">
+                <i class="fas fa-forward"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+	<script src='js/jquery.min.js'></script>
+	<script  src="js/index.js"></script>
+
+
+
+
+
+        <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
+        <script>
+        $('a').each(function() {
+          const $this = $(this);
+          const href = $this.attr('href');
+          if (href && href.match('^((http|https|thunder|qqdl|ed2k|Flashget|qbrowser|ftp|rtsp|mms)://)')) {
+            const strs = href.split('/');
+            if (strs.length >= 3) {
+                const host = strs[2];
+                if (host !== 'window.location.host' || window.location.host) {
+                    $this.attr('href', '/go.html?u='+Base64.encode(href)+'').attr('rel', 'external nofollow noopener noreferrer');
+                    if (true) {
+                        $this.attr('target', '_blank');
+                    }
+                }
+            }
+          }
+        });
+        </script></body>
+
+</html>
