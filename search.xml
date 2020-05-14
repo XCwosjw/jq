@@ -3,13 +3,7 @@
   <entry>
     <title>Hello World!</title>
     <url>/2020/Hello%20World%EF%BC%81/</url>
-    <content><![CDATA[<p>   从开始搭建自己的博客到现在大概已经一个多月了，中途修修改改了好多次，最近还给它加上了个<a href="https://google.xcwosjw.tk" target="_blank" rel="noopener">Google镜像(Beta)</a>以及一个<a href="https://pan.xcwosjw.tk/" target="_blank" rel="noopener">云盘</a>，<s>全站用的都是Cloudflare的CDN，所以访问可能稍慢，但缓存完再访问就快了，也懒得做三网优化了，因为我想打游戏了</s><img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN/images/doge.png" alt="doge"></p>
-<p>   我知道这肯定没人看到，就当写给自己看吧。</p>
-<p>   <font color=#FF0000>2020/4/7 更新</font>  现在用的是走的是zeit的CDN，有台湾和香港的数据中心，速度比较友好。（话说我设定DNS解析时候打错了个字母，结果发现根本无法解析，吓我一跳，搞得我还以为这个域名这么快就被污染了。)</p>
-<p>   <font color=#FF0000>2020/4/8 更新</font> 删除了Youtube镜像，因为Youtube镜像实在太容易被墙了。</p>
-<p>   <font color=#FF0000>2020/4/9 更新</font> 博客进行了一次大改，样式全变了233。</p>
-<p>   <font color=#FF0000>2020/4/24 更新</font> 又改了一次233。</p>
-<p>   <font color=#FF0000>2020/4/28 更新</font> 又又把CDN换成了Cloudflare，还做了三网优化233</p>
+    <content><![CDATA[<p>   Hello World?</p>
 ]]></content>
   </entry>
 </search>
