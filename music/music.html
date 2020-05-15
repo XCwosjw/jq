@@ -1,82 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 <title>Music Player | Audio Player 🎵</title>
-
-
-<!--字体图标样式-->
-<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/XCwosjw/CDN@master/css/solid.css'>
-<link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/XCwosjw/CDN@master/css/fontawesome.css'>
-
-
-<!--布局样式-->
-<link rel="stylesheet" href="css/style.css">
-
-  
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="./js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 <link rel="alternate" href="/atom.xml" title="星" type="application/atom+xml">
 </head>
-
 <body>
-
-  <!-- Tracks used in this music/audio player application are free to use. I downloaded them from Soundcloud and NCS websites. I am not the owner of these tracks.
-
-Please don't create new pen by just copying and pasting code from this pen ( as I have seen some of them ), if you do that then don't forget to link back to this original pen. If you want to copy this pen then simply use the Fork button. Thank you -->
-
-  <div id="app-cover">
-      <div id="bg-artwork"></div>
-      <div id="bg-layer"></div>
-      <div id="player">
-        <div id="player-track">
-          <div id="album-name"></div>
-          <div id="track-name"></div>
-          <div id="track-time">
-            <div id="current-time"></div>
-            <div id="track-length"></div>
-          </div>
-          <div id="s-area">
-            <div id="ins-time"></div>
-            <div id="s-hover"></div>
-            <div id="seek-bar"></div>
-          </div>
-        </div>
-        <div id="player-content">
-          <div id="album-art">
-            <img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN/images/In%20the%20end.jpg" class="active" id="_1">
-            <img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/CDN/images/aLIEz.jpg" id="_2">
-            <div id="buffer-box">缓冲…</div>
-          </div>
-          <div id="player-controls">
-            <div class="control">
-              <div class="button" id="play-previous">
-                <i class="fas fa-backward"></i>
-              </div>
-            </div>
-            <div class="control">
-              <div class="button" id="play-pause-button">
-                <i class="fas fa-play"></i>
-              </div>
-            </div>
-            <div class="control">
-              <div class="button" id="play-next">
-                <i class="fas fa-forward"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-    
-    
-	<script src='js/jquery.min.js'></script>
-	<script  src="js/index.js"></script>
-
-
-
-
+	<div class="player-bg"></div>
+	<div class="player-opacity"></div>
+	<div class="player-main">
+		<div class="player-content">
+			<div class="img">
+				<div class="boder"></div>
+			</div>
+			<div class="detail">
+				<div class="title">
+					加载中...
+				</div>
+				<div class="author">
+					加载中...
+				</div>
+			</div>
+			<div class="opration">
+				<div class="before" onclick="pre();">
+					<ion-icon name="play-skip-back"></ion-icon>
+				</div>
+				<div class="play" onclick="toPlay();">
+					<ion-icon name="pause"></ion-icon>
+				</div>
+				<div class="next" onclick="next();">
+					<ion-icon name="play-skip-forward"></ion-icon>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<audio id="audio" ></audio>
 
         <script src="//cdn.jsdelivr.net/npm/js-base64/base64.min.js"></script>
         <script>
@@ -97,5 +61,4 @@ Please don't create new pen by just copying and pasting code from this pen ( as 
           }
         });
         </script></body>
-
 </html>

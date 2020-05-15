@@ -1,232 +1,124 @@
-$(function()
-{
-    var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false, albums = ['In the end','aLIEz'], trackNames = ['Tommee Profitt (Remix)','mizuki / SawanoHiroyuki[nZk]'], albumArtworks = ['_1','_2'], trackUrl = ['https://cdn.jsdelivr.net/gh/XCwosjw/CDN@master/music/In%20the%20end.mp3','https://cdn.jsdelivr.net/gh/XCwosjw/CDN@master/music/aLIEz.mp3'], playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
-
-    function playPause()
-    {
-        setTimeout(function()
-        {
-            if(audio.paused)
-            {
-                playerTrack.addClass('active');
-                albumArt.addClass('active');
-                checkBuffering();
-                i.attr('class','fas fa-pause');
-                audio.play();
-            }
-            else
-            {
-                playerTrack.removeClass('active');
-                albumArt.removeClass('active');
-                clearInterval(buffInterval);
-                albumArt.removeClass('buffering');
-                i.attr('class','fas fa-play');
-                audio.pause();
-            }
-        },300);
-    }
-
-    	
-	function showHover(event)
-	{
-		seekBarPos = sArea.offset(); 
-		seekT = event.clientX - seekBarPos.left;
-		seekLoc = audio.duration * (seekT / sArea.outerWidth());
-		
-		sHover.width(seekT);
-		
-		cM = seekLoc / 60;
-		
-		ctMinutes = Math.floor(cM);
-		ctSeconds = Math.floor(seekLoc - ctMinutes * 60);
-		
-		if( (ctMinutes < 0) || (ctSeconds < 0) )
-			return;
-		
-        if( (ctMinutes < 0) || (ctSeconds < 0) )
-			return;
-		
-		if(ctMinutes < 10)
-			ctMinutes = '0'+ctMinutes;
-		if(ctSeconds < 10)
-			ctSeconds = '0'+ctSeconds;
-        
-        if( isNaN(ctMinutes) || isNaN(ctSeconds) )
-            insTime.text('--:--');
-        else
-		    insTime.text(ctMinutes+':'+ctSeconds);
-            
-		insTime.css({'left':seekT,'margin-left':'-21px'}).fadeIn(0);
-		
-	}
-
-    function hideHover()
-	{
-        sHover.width(0);
-        insTime.text('00:00').css({'left':'0px','margin-left':'0px'}).fadeOut(0);		
-    }
-    
-    function playFromClickedPos()
-    {
-        audio.currentTime = seekLoc;
-		seekBar.width(seekT);
-		hideHover();
-    }
-
-    function updateCurrTime()
-	{
-        nTime = new Date();
-        nTime = nTime.getTime();
-
-        if( !tFlag )
-        {
-            tFlag = true;
-            trackTime.addClass('active');
-        }
-
-		curMinutes = Math.floor(audio.currentTime / 60);
-		curSeconds = Math.floor(audio.currentTime - curMinutes * 60);
-		
-		durMinutes = Math.floor(audio.duration / 60);
-		durSeconds = Math.floor(audio.duration - durMinutes * 60);
-		
-		playProgress = (audio.currentTime / audio.duration) * 100;
-		
-		if(curMinutes < 10)
-			curMinutes = '0'+curMinutes;
-		if(curSeconds < 10)
-			curSeconds = '0'+curSeconds;
-		
-		if(durMinutes < 10)
-			durMinutes = '0'+durMinutes;
-		if(durSeconds < 10)
-			durSeconds = '0'+durSeconds;
-        
-        if( isNaN(curMinutes) || isNaN(curSeconds) )
-            tProgress.text('00:00');
-        else
-		    tProgress.text(curMinutes+':'+curSeconds);
-        
-        if( isNaN(durMinutes) || isNaN(durSeconds) )
-            tTime.text('00:00');
-        else
-		    tTime.text(durMinutes+':'+durSeconds);
-        
-        if( isNaN(curMinutes) || isNaN(curSeconds) || isNaN(durMinutes) || isNaN(durSeconds) )
-            trackTime.removeClass('active');
-        else
-            trackTime.addClass('active');
-
-        
-		seekBar.width(playProgress+'%');
-		
-		if( playProgress == 100 )
-		{
-			i.attr('class','fa fa-play');
-			seekBar.width(0);
-            tProgress.text('00:00');
-            albumArt.removeClass('buffering').removeClass('active');
-            clearInterval(buffInterval);
-		}
-    }
-    
-    function checkBuffering()
-    {
-        clearInterval(buffInterval);
-        buffInterval = setInterval(function()
-        { 
-            if( (nTime == 0) || (bTime - nTime) > 1000  )
-                albumArt.addClass('buffering');
-            else
-                albumArt.removeClass('buffering');
-
-            bTime = new Date();
-            bTime = bTime.getTime();
-
-        },100);
-    }
-
-    function selectTrack(flag)
-    {
-        if( flag == 0 || flag == 1 )
-            ++currIndex;
-        else
-            --currIndex;
-
-        if( (currIndex > -1) && (currIndex < albumArtworks.length) )
-        {
-            if( flag == 0 )
-                i.attr('class','fa fa-play');
-            else
-            {
-                albumArt.removeClass('buffering');
-                i.attr('class','fa fa-pause');
-            }
-
-            seekBar.width(0);
-            trackTime.removeClass('active');
-            tProgress.text('00:00');
-            tTime.text('00:00');
-
-            currAlbum = albums[currIndex];
-            currTrackName = trackNames[currIndex];
-            currArtwork = albumArtworks[currIndex];
-
-            audio.src = trackUrl[currIndex];
-            
-            nTime = 0;
-            bTime = new Date();
-            bTime = bTime.getTime();
-
-            if(flag != 0)
-            {
-                audio.play();
-                playerTrack.addClass('active');
-                albumArt.addClass('active');
-            
-                clearInterval(buffInterval);
-                checkBuffering();
-            }
-
-            albumName.text(currAlbum);
-            trackName.text(currTrackName);
-            albumArt.find('img.active').removeClass('active');
-            $('#'+currArtwork).addClass('active');
-            
-            bgArtworkUrl = $('#'+currArtwork).attr('src');
-
-            bgArtwork.css({'background-image':'url('+bgArtworkUrl+')'});
-        }
-        else
-        {
-            if( flag == 0 || flag == 1 )
-                --currIndex;
-            else
-                ++currIndex;
-        }
-    }
-
-    function initPlayer()
-	{	
-        audio = new Audio();
-
-		selectTrack(0);
-		
-		audio.loop = false;
-		
-		playPauseButton.on('click',playPause);
-		
-		sArea.mousemove(function(event){ showHover(event); });
-		
-        sArea.mouseout(hideHover);
-        
-        sArea.on('click',playFromClickedPos);
-		
-        $(audio).on('timeupdate',updateCurrTime);
-
-        playPreviousTrackButton.on('click',function(){ selectTrack(-1);} );
-        playNextTrackButton.on('click',function(){ selectTrack(1);});
-	}
-    
-	initPlayer();
+var onOff;
+var totalTime;
+var currentTime;
+var music;
+var preMusic=NaN;
+var playOnOff=false;
+$(document).ready(function(){
+	setTimeout(Initting(),1000);
 });
+//初始化加载
+function toPlay(){
+	if(playOnOff){
+		playOnOff=false;
+		$("#audio")[0].pause();
+		$(".play ion-icon").attr("name","play");
+	}else{
+		playOnOff=true;
+		$("#audio")[0].play();
+		$(".play ion-icon").attr("name","pause");
+	}
+}
+function Initting(){
+	start();
+	onOff=self.setInterval("isFinish();",1000)
+}
+//开始获取信息
+function start() {
+	$.ajax({
+		url: "https://api.uomg.com/api/rand.music",
+		type: "post",
+		data: {
+			"sort": "热歌榜",
+			"format": "json"
+		},
+		dataType: "json",
+		error: function() {
+			alert("请求出错")
+		},
+		success: function(data) {
+			//console.log(data.data);
+			preMusic=music;
+			music=data.data;
+			$("#audio").attr("src", music.url);
+			$("#audio")[0].play();
+			$(".player-bg").css("background-image","url("+music.picurl+")");
+			$(".img").css("background-image","url("+music.picurl+")");
+			console.log("初始化信息");
+			$(".title").text(music.name);
+			$(".author").text(music.artistsname);
+			setTimeout(function(){
+				getTotalTime();
+				getCurrentTime();
+			},4000);
+		}
+	});
+}
+//获取总时间
+function getTotalTime() {
+	totalTime = $("#audio")[0].duration;
+	if (isNaN(totalTime)) {
+		getTotalTime();
+	} else {
+		//console.log("歌曲时间为：" + totalTime + "秒");
+		//return totalTime;
+	}
+}
+//获取当前时间
+function getCurrentTime() {
+	currentTime = $("#audio")[0].currentTime;
+	if (isNaN(currentTime)) {
+		getTotalTime();
+	} else {
+		//console.log("歌曲当前时间为：" + currentTime + "秒");
+		//return currentTime;
+	}
+}
+//判断是否播放完毕
+function isFinish(){
+	//console.log("1："+currentTime+"2："+totalTime);
+	if(!isNaN(currentTime) && !isNaN(totalTime)){
+	getTotalTime();
+	getCurrentTime();
+	}
+	if(!isNaN(currentTime) && !isNaN(totalTime) && totalTime-currentTime<0.5){
+		console.log("清空当前歌曲数据");
+		totalTime=NaN;
+		currentTime=NaN;
+		console.log("开始获取新歌曲");
+		start();
+	}
+
+}
+
+//上一曲
+function pre(){
+	//console.log(!$.isEmptyObject(preMusic));
+	//console.log(preMusic);
+	if(!$.isEmptyObject(preMusic)){
+		$("#audio")[0].pause();
+		currentTime=NaN;
+		totalTime=NaN;
+		$("#audio").attr("src", preMusic.url);
+		$("#audio")[0].play();
+		$(".player-bg").css("background-image","url("+preMusic.picurl+")");
+		$(".img").css("background-image","url("+preMusic.picurl+")");
+		console.log("初始化信息");
+		$(".title").text(preMusic.name);
+		$(".author").text(preMusic.artistsname);
+		preMusic=NaN;
+		setTimeout(function(){
+			getTotalTime();
+			getCurrentTime();
+		},4000);
+	}else{
+		next();
+	}
+}
+//下一曲
+function next(){
+	$("#audio")[0].pause();
+	currentTime=NaN;
+	totalTime=NaN;
+	start();
+}
