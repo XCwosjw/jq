@@ -2,45 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://xcwosjw.tk/vercel.json</loc>
+    <loc>https://blog.xcwosjw.com/blog/1c291ca3/</loc>
     
-    <lastmod>2020-09-06T13:34:43.862Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xcwosjw.tk/Player/Music-Player.html</loc>
-    
-    <lastmod>2020-05-16T00:08:42.854Z</lastmod>
+    <lastmod>2020-09-20</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xcwosjw.tk/2020/Hello%20World%EF%BC%81/</loc>
+    <loc>https://blog.xcwosjw.com/vercel.json</loc>
     
-    <lastmod>2020-05-14T07:08:31.901Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xcwosjw.tk/tags/index.html</loc>
-    
-    <lastmod>2020-03-05T01:09:51.377Z</lastmod>
+    <lastmod>2020-09-06</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xcwosjw.tk/categories/index.html</loc>
+    <loc>https://blog.xcwosjw.com/Player/Music-Player.html</loc>
     
-    <lastmod>2020-03-05T01:09:36.775Z</lastmod>
+    <lastmod>2020-05-16</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xcwosjw.tk/about/index.html</loc>
+    <loc>https://blog.xcwosjw.com/tags/index.html</loc>
     
-    <lastmod>2020-03-05T01:09:08.777Z</lastmod>
+    <lastmod>2020-03-05</lastmod>
     
   </url>
+  
+  <url>
+    <loc>https://blog.xcwosjw.com/categories/index.html</loc>
+    
+    <lastmod>2020-03-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.xcwosjw.com/about/index.html</loc>
+    
+    <lastmod>2020-03-05</lastmod>
+    
+  </url>
+  
+
+  <url>
+    <loc>https://blog.xcwosjw.com/</loc>
+    <lastmod>2020-09-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+
   
 </urlset>
