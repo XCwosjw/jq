@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://xc教程.tk/"/>
-  <updated>2020-10-23T04:57:04.201Z</updated>
+  <updated>2020-10-23T09:25:17.782Z</updated>
   <id>https://xc教程.tk/</id>
   
   <author>
@@ -17,22 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>索引</title>
-    <link href="https://xc教程.tk/blog/11557/"/>
-    <id>https://xc教程.tk/blog/11557/</id>
-    <published>2020-10-23T04:52:35.000Z</published>
-    <updated>2020-10-23T04:57:04.201Z</updated>
+    <title>v2rayNG翻墙教程</title>
+    <link href="https://xc教程.tk/blog/27024/"/>
+    <id>https://xc教程.tk/blog/27024/</id>
+    <published>2020-10-23T06:45:27.847Z</published>
+    <updated>2020-10-23T09:25:17.782Z</updated>
     
-    <content type="html"><![CDATA[<center><font face="黑体" size=10>索引</font></center><br><HR><center>等待编写</center>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>文中有下划线的字都是链接，可以点的！！！</p><h1 id="注册机场账号并购买套餐"><a href="#注册机场账号并购买套餐" class="headerlink" title="注册机场账号并购买套餐"></a>注册机场账号并购买套餐</h1><p><a href="https://jsproxy.xcwosjw.tk/-----https://zh.wikipedia.org/zh-sg/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E" target="_blank" rel="noopener">先点这里</a>看下为什么你无法访问某些网站</p><p>而机场就是一种提供翻墙服务（节点）的网站的统称</p><p>值得注意的是，开办机场是违法的，所以所有机场都有跑路的可能性，只能选择一些老牌的有信誉的机场来尽量避免钱打水漂的风险</p><p><a href="https://suying555.net/auth/register?code=dTFo" target="_blank" rel="noopener">点这里</a>注册速鹰666机场（别问我为什么名字这么奇怪，又不是我开的）</p><p>然后<a href="https://suying555.com/user/shop" target="_blank" rel="noopener">点这里</a>购买套餐，按照自身情况来</p><h1 id="下载v2rayNG，更新订阅···"><a href="#下载v2rayNG，更新订阅···" class="headerlink" title="下载v2rayNG，更新订阅···"></a>下载v2rayNG，更新订阅···</h1><p>按照视频来吧，我懒（机场提供）<br>记得下载v2ray<br>视频如果没显示就刷新一下</p><div id="dplayer"></div><script>const dp = new DPlayer({    container: document.getElementById('dplayer'),    video: {        url: 'https://cdn.jsdelivr.net/gh/XCwosjw/CDN@master/android-V2ray.mp4',    },});</script><p><font color='red'>警告！使用v2rayNG后本机所有流量都会走v2rayNG,会导致访问国内网站慢！不用时请把v2rayNG关掉！！</font></p><h1 id="节点的选择"><a href="#节点的选择" class="headerlink" title="节点的选择"></a>节点的选择</h1><h2 id="各套餐区别"><a href="#各套餐区别" class="headerlink" title="各套餐区别"></a>各套餐区别</h2><p><img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/Pic-CDN//QQ%E6%88%AA%E5%9B%BE20201023165911.jpg" alt=""></p><h2 id="各类常见节点"><a href="#各类常见节点" class="headerlink" title="各类常见节点"></a>各类常见节点</h2><h3 id="IPLC"><a href="#IPLC" class="headerlink" title="IPLC"></a>IPLC</h3><p>国际私有租用线路,即”国际专线”,速鹰666机场提供的最顶尖的线路，延迟最低，速度最快，但倍率也最高，只有旗舰版有<br><img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/Pic-CDN//QQ%E6%88%AA%E5%9B%BE20201023163414.jpg" alt=""><br>IPLC，代表着这是IPLC线路<br>移动，代表这是移动线路的IPLC，适合移动用户使用<br>深圳-香港，代表这条IPLC线路由深圳服务器中转至香港，也就是说，你最后的IP是香港<br>解锁，<img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/Pic-CDN//QQ%E6%88%AA%E5%9B%BE20201023164630.jpg" alt=""><br>x4.0，<img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/Pic-CDN//QQ%E6%88%AA%E5%9B%BE20201023164622.jpg" alt=""></p><h3 id="BGP中转"><a href="#BGP中转" class="headerlink" title="BGP中转"></a>BGP中转</h3><p>由国内的BGP服务器中转，标准版有<br><img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/Pic-CDN//QQ%E6%88%AA%E5%9B%BE20201023162931.jpg" alt=""><br>北京BGP-香港，代表这条BGP线路由北京BGP服务器中转至香港，也就是说，你最后的IP是香港<br>其他的一样</p><h3 id="CN2线路"><a href="#CN2线路" class="headerlink" title="CN2线路"></a>CN2线路</h3><p>由CN2服务器中转，和BGP线路速度应该差不多，标准版有<br><img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/Pic-CDN//QQ%E6%88%AA%E5%9B%BE20201023162902.jpg" alt=""><br>上海CN2-香港，代表这条CN2线路由上海CN2服务器中转至香港，也就是说，你最后的IP是香港<br>其他的一样</p><h3 id="普通中转线路"><a href="#普通中转线路" class="headerlink" title="普通中转线路"></a>普通中转线路</h3><p>由普通国内服务器中转，入门版与基础版有，速度较快<br><img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/Pic-CDN//QQ%E6%88%AA%E5%9B%BE20201023165727.jpg" alt=""><br>广东-日本，代表这条线路由广东中转至日本，也就是说，你最后的IP是日本<br>其他的一样</p><p><font color='red'>注意，我写这些并不是让你只挑这些好线路，速度和自身的网络情况有非常大关系，有可能你用一个普通中转线路甚至比IPLC还要快，也不是让你只挑图片里那个线路，最好是按照下面的方法自己选好线路</font></p><h2 id="选好线路方法"><a href="#选好线路方法" class="headerlink" title="选好线路方法"></a>选好线路方法</h2><p>测每个节点Tcping<br><img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/Pic-CDN//QQ%E6%88%AA%E5%9B%BE20201010194520.jpg" alt=""><br>然后挑一个Tcping较低的节点（每个节点右上角）<br>然后连接，如果感觉速度慢就再换个Tcping较低的节点，直到速度快为止。</p><h1 id="最后的一些话"><a href="#最后的一些话" class="headerlink" title="最后的一些话"></a>最后的一些话</h1><p>基础教程和进阶教程我会慢慢补充完整…等吧。咕咕咕？？</p><p>还有Pixiv的网页地址是<a href="www.pixiv.net">www.pixiv.net</a><br>在浏览器中打开，不要在QQ中打开！！！</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;center&gt;&lt;font face=&quot;黑体&quot; size=10&gt;索引&lt;/font&gt;&lt;/center&gt;&lt;br&gt;
-&lt;HR&gt;
-&lt;center&gt;等待编写&lt;/center&gt;
-
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;文中有下划线的字都是链接，可以点的！！！&lt;/p&gt;
+&lt;h1 id=&quot;注册机场账号并购买套餐&quot;&gt;&lt;a href=&quot;#注册机场账号并购买套餐&quot; c
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>索引</title>
+    <link href="https://xc教程.tk/blog/11557/"/>
+    <id>https://xc教程.tk/blog/11557/</id>
+    <published>2020-10-23T04:52:35.000Z</published>
+    <updated>2020-10-23T09:26:00.238Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><img data-src="https://cdn.jsdelivr.net/gh/XCwosjw/Pic-CDN//20170111022240.png" alt=""></p><h1 id="基础教程"><a href="#基础教程" class="headerlink" title="基础教程"></a>基础教程</h1><p>是普通教程和进阶教程的基础，在进行普通教程和进阶教程前必须将相应设备的基础教程操作完</p><p><a href="blog/27024/">v2rayNG翻墙教程（手机端）</a></p><h1 id="普通教程"><a href="#普通教程" class="headerlink" title="普通教程"></a>普通教程</h1><p>等待编写</p><h1 id="进阶教程"><a href="#进阶教程" class="headerlink" title="进阶教程"></a>进阶教程</h1><p>等待编写</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;img data-src=&quot;https://cdn.jsdelivr.net/gh/XCwosjw/Pic-CDN//2017011102
       
     
     </summary>
