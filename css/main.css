@@ -1168,7 +1168,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #330aff;
+  background: #7ae939;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2657,7 +2657,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("https://api.ixiaowai.cn/gqapi/gqapi.php") no-repeat;
+  background: url("https://api.ixiaowai.cn/api/api.php") no-repeat;
 /* 背景图垂直、水平均居中 */
   background-position: center center;
 /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */

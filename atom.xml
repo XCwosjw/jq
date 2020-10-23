@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>XCwosjw博客</title>
+  <title>临时网站</title>
   
   <subtitle>233</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://blog.xcwosjw.com/"/>
-  <updated>2020-10-02T09:22:47.340Z</updated>
-  <id>https://blog.xcwosjw.com/</id>
+  <link href="https://xc教程.tk/"/>
+  <updated>2020-10-23T04:57:04.201Z</updated>
+  <id>https://xc教程.tk/</id>
   
   <author>
     <name>XCwosjw</name>
@@ -17,19 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World!</title>
-    <link href="https://blog.xcwosjw.com/blog/22462/"/>
-    <id>https://blog.xcwosjw.com/blog/22462/</id>
-    <published>2020-04-05T10:29:44.000Z</published>
-    <updated>2020-10-02T09:22:47.340Z</updated>
+    <title>索引</title>
+    <link href="https://xc教程.tk/blog/11557/"/>
+    <id>https://xc教程.tk/blog/11557/</id>
+    <published>2020-10-23T04:52:35.000Z</published>
+    <updated>2020-10-23T04:57:04.201Z</updated>
     
-    <content type="html"><![CDATA[<p>   Hello World?</p>]]></content>
+    <content type="html"><![CDATA[<center><font face="黑体" size=10>索引</font></center><br><HR><center>等待编写</center>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;   Hello World?&lt;/p&gt;
+        &lt;center&gt;&lt;font face=&quot;黑体&quot; size=10&gt;索引&lt;/font&gt;&lt;/center&gt;&lt;br&gt;
+&lt;HR&gt;
+&lt;center&gt;等待编写&lt;/center&gt;
 
       
     
